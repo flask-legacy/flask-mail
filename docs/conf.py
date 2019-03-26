@@ -38,7 +38,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Flask-Mail'
+project = u'Flask-Mail-Lgeacy'
 copyright = u'2010, Dan Jacob'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -95,7 +95,7 @@ exclude_trees = ['_build']
 html_theme = 'flask_small'
 #html_theme = 'default'
 html_theme_options = {
-     'index_logo': 'flask-mail.png',
+     'index_logo': 'flask-mail-legacy.png',
      'github_fork': None
 }
 
@@ -178,7 +178,7 @@ htmlhelp_basename = 'flask-maildoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'flask-mail.tex', u'flask-mail Documentation',
+  ('index', 'flask-mail-legacy.tex', u'flask-mail-legacy Documentation',
    u'Dan Jacob', 'manual'),
 ]
 

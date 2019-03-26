@@ -1,4 +1,4 @@
-flask-mail
+flask-mail-legacy
 ======================================
 
 .. module:: flask-mail
@@ -6,14 +6,16 @@ flask-mail
 One of the most basic functions in a web application is the ability to send
 emails to your users.
 
-The **Flask-Mail** extension provides a simple interface to set up SMTP with your
+The **Flask-Mail-Legacy** extension provides a simple interface to set up SMTP with your
 `Flask`_ application and to send messages from your views and scripts.
+
+**Flask-Mail-Legacy** is a fork of `Flask-Mail <http://packages.python.org/Flask-Mail/>`_
 
 Links
 -----
 
-* `documentation <http://packages.python.org/Flask-Mail/>`_
-* `source <http://github.com/mattupstate/flask-mail>`_
+* `documentation <https://flask-mail-legacy.readthedocs.io/>`_
+* `source <http://github.com/flask-legacy/flask-mail>`_
 * :doc:`changelog </changelog>`
 
 Installing Flask-Mail
@@ -21,21 +23,21 @@ Installing Flask-Mail
 
 Install with **pip** and **easy_install**::
 
-    pip install Flask-Mail
+    pip install Flask-Mail-Legacy
 
 or download the latest version from version control::
 
-    git clone https://github.com/mattupstate/flask-mail.git
+    git clone https://github.com/flask-legacy/flask-mail.git
     cd flask-mail
     python setup.py install
 
 If you are using **virtualenv**, it is assumed that you are installing flask-mail
 in the same virtualenv as your Flask application(s).
 
-Configuring Flask-Mail
-----------------------
+Configuring Flask-Mail-Legacy
+-----------------------------
 
-**Flask-Mail** is configured through the standard Flask config API. These are the available
+**Flask-Mail-Legacy** is configured through the standard Flask config API. These are the available
 options (each is explained later in the documentation):
 
 * **MAIL_SERVER** : default **'localhost'**
@@ -223,7 +225,7 @@ Signalling support
 
 .. versionadded:: 0.4
 
-**Flask-Mail** now provides signalling support through a ``email_dispatched`` signal. This is sent whenever an email is
+**Flask-Mail-Legacy** now provides signalling support through a ``email_dispatched`` signal. This is sent whenever an email is
 dispatched (even if the email is not actually sent, i.e. in a testing environment).
 
 A function connecting to the ``email_dispatched`` signal takes a ``Message`` instance as a first argument, and the Flask
@@ -238,7 +240,7 @@ app instance as an optional argument::
 Testing with a catch-all mail
 -----------------------------
 
-Flask-Mail provide a way to test without sending mails to the whole world.
+Flask-Mail-Legacy provide a way to test without sending mails to the whole world.
 You can simply set ``MAIL_CATCH_ALL`` configuration parameter
 to a test mailbox and all outgoing mails will be sent to this single mailbox.
 The original recipients will set as display name and if it already have one,
@@ -262,4 +264,4 @@ API
    :members: attach, add_recipient
 
 .. _Flask: http://flask.pocoo.org
-.. _GitHub: http://github.com/mattupstate/flask-mail
+.. _GitHub: http://github.com/flask-legacy/flask-mail
